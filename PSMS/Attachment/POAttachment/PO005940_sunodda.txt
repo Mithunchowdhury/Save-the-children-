@@ -1,0 +1,5 @@
+Select * from po where PONO='PO/SCI/BDCO/FY-15/00466'
+I change address
+
+65-66, Dhaka Chember of Commerce building (3rd floor), Motijheel, 1000  
+

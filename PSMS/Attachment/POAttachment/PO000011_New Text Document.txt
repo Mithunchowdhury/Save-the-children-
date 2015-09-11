@@ -1,0 +1,158 @@
+     public void AddtoGrid()
+        {
+            try
+            {
+                decimal totalQG = 0;
+                decimal totalQB = 0;
+                List<MRR_DetailsBLL> list = new List<MRR_DetailsBLL>();
+                MRR_DetailsBLL ob = new MRR_DetailsBLL();
+                int i = 1;
+                if (gvMRR.Rows.Count > 0)
+                {
+                    foreach (GridViewRow row in gvMRR.Rows)
+                    {
+                        if (hfSlNo.Value == "")
+                        {
+                            ob = new MRR_DetailsBLL();
+                            ob.MRRLineNo = i;
+                            i++;
+                            ob.MRRID = Convert.ToInt16(((HiddenField)row.FindControl("hfMRRID")).Value);
+                            ob.MRRDID = Convert.ToInt16(((HiddenField)row.FindControl("hfMRRDID")).Value);
+                            ob.ItemID = Convert.ToInt16(((HiddenField)row.FindControl("hfItemID")).Value);
+                            ob.ItemName = ((Label)row.FindControl("lblItem")).Text;
+                            ob.MatDes = ((Label)row.FindControl("lblMaterialDesc")).Text;
+                            //if (row.Cells[3].Text != "&nbsp;")
+                            //{
+                            //    ob.MatDes = row.Cells[3].Text;
+                            //}
+                            ob.Price = Convert.ToDecimal(((Label)row.FindControl("lblPrice")).Text);
+                            ob.Unit = row.Cells[4].Text;
+                            ob.QuantityGood = Convert.ToDecimal(((Label)row.FindControl("lblQInGood")).Text);
+                            ob.QuantityBad = Convert.ToDecimal(((Label)row.FindControl("lblQInBad")).Text);
+                            if (row.Cells[9].Text != "&nbsp;")
+                            {
+                                ob.LotNo = row.Cells[9].Text;
+                            }                            
+                            ob.TotQty = ob.QuantityGood + ob.QuantityBad;
+                            ob.Status = ((HiddenField)row.FindControl("hfStatus")).Value;
+                            ob.Remarks = ((Label)row.FindControl("lblRemarks")).Text;
+                            list.Add(ob);
+                            totalQG = totalQG + ob.QuantityGood;
+                            totalQB = totalQB + ob.QuantityBad;
+                        }
+                        else
+                        {
+                            ob = new MRR_DetailsBLL();
+                            ob.MRRLineNo = i;
+                            if (hfSlNo.Value != ((Label)row.FindControl("lblSl")).Text)
+                            {
+                                ob.MRRID = Convert.ToInt16(((HiddenField)row.FindControl("hfMRRID")).Value);
+                                ob.MRRDID = Convert.ToInt16(((HiddenField)row.FindControl("hfMRRDID")).Value);
+                                ob.ItemID = Convert.ToInt16(((HiddenField)row.FindControl("hfItemID")).Value);
+                                ob.ItemName = ((Label)row.FindControl("lblItem")).Text;
+                                ob.MatDes = ((Label)row.FindControl("lblMaterialDesc")).Text;
+                                //if (row.Cells[3].Text != "&nbsp;")
+                                //{
+                                //    ob.MatDes = row.Cells[3].Text;
+                                //}
+                                ob.Price = Convert.ToDecimal(((Label)row.FindControl("lblPrice")).Text);
+                                ob.Unit = row.Cells[4].Text;
+                                ob.QuantityGood = Convert.ToDecimal(((Label)row.FindControl("lblQInGood")).Text);
+                                ob.QuantityBad = Convert.ToDecimal(((Label)row.FindControl("lblQInBad")).Text);
+                                if (row.Cells[9].Text != "&nbsp;")
+                                {
+                                    ob.LotNo = row.Cells[9].Text;
+                                }
+                                ob.TotQty = ob.QuantityGood + ob.QuantityBad;
+                                ob.Status = ((HiddenField)row.FindControl("hfStatus")).Value;
+                                ob.Remarks = ((Label)row.FindControl("lblRemarks")).Text;
+                                list.Add(ob);
+                                totalQG = totalQG + ob.QuantityGood;
+                                totalQB = totalQB + ob.QuantityBad;
+                            }
+                            else if (hfSlNo.Value == ((Label)row.FindControl("lblSl")).Text)
+                            {
+                                ob = new MRR_DetailsBLL();
+                                ob.MRRLineNo = i;
+                                ob.MRRID = Convert.ToInt16(hfMRRID.Value);
+                                ob.MRRDID = Convert.ToInt16(hfMRRDID.Value);
+                                ob.ItemID = Convert.ToInt16(ddlMaterial.SelectedValue.ToString());
+                                ob.ItemName = ddlMaterial.SelectedItem.Text;
+                                ob.MatDes = txtMaterialDesc.Text;
+                                ob.Price = Convert.ToDecimal(txtPrice.Text);
+                                ob.Unit = txtUnit.Text;
+                                ob.QuantityGood = Convert.ToDecimal(txtQtyGood.Text);
+                                if (txtQtyBad.Text != "")
+                                {
+                                    ob.QuantityBad = Convert.ToDecimal(txtQtyBad.Text);
+                                }
+                                else
+                                {
+                                    ob.QuantityBad = 0;
+                                }
+                                if (txtLotNo.Text != "")
+                                {
+                                    ob.LotNo = txtLotNo.Text;
+                                }
+                                else
+                                {
+                                    ob.LotNo = txtMRRNo.Text;
+                                }
+                                if (!string.IsNullOrEmpty(hfPRVQ.Value))
+                                {
+                                    ob.QtyPrev = Convert.ToDecimal(hfPRVQ.Value);
+                                }
+                                ob.TotQty = ob.QuantityGood + ob.QuantityBad;
+                                ob.Status = ((HiddenField)row.FindControl("hfStatus")).Value;
+                                ob.Remarks = txtItemRemarks.Text;
+                                list.Add(ob);
+                                totalQG = totalQG + ob.QuantityGood;
+                                totalQB = totalQB + ob.QuantityBad;
+                            }
+                            i++;
+                        }
+                    }
+                }
+                if (hfSlNo.Value == "")
+                {
+                    ob = new MRR_DetailsBLL();
+                    ob.MRRLineNo = i;
+                    ob.ItemID = Convert.ToInt16(ddlMaterial.SelectedValue.ToString());
+                    ob.ItemName = ddlMaterial.SelectedItem.Text;
+                    ob.MatDes = txtMaterialDesc.Text;
+                    ob.Price = Convert.ToDecimal(txtPrice.Text);
+                    ob.Unit = txtUnit.Text;
+                    ob.QuantityGood = Convert.ToDecimal(txtQtyGood.Text);
+                    if (txtQtyBad.Text != "")
+                    {
+                        ob.QuantityBad = Convert.ToDecimal(txtQtyBad.Text);
+                    }
+                    else
+                    {
+                        ob.QuantityBad = 0;
+                    }
+                    if (txtLotNo.Text != "")
+                    {
+                        ob.LotNo = txtLotNo.Text;
+                    }
+                    else
+                    {
+                        ob.LotNo = txtMRRNo.Text;
+                    }
+                    ob.TotQty = ob.QuantityGood + ob.QuantityBad;
+                    ob.Status = "I";
+                    ob.Remarks = txtItemRemarks.Text;
+                    list.Add(ob);
+                    totalQG = totalQG + ob.QuantityGood;
+                    totalQB = totalQB + ob.QuantityBad;
+                }              
+                gvMRR.DataSource = list;
+                gvMRR.DataBind();
+                //CSUtility.SetGridFooterValue(gvMRR, "txtTQtyInGood", totalQG.ToString());
+                //CSUtility.SetGridFooterValue(gvMRR, "txtTQtyInBad", totalQB.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }

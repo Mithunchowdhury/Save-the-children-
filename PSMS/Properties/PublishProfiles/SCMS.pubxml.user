@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\SCMS_Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App.Master">
+      <publishTime>08/17/2015 14:34:59</publishTime>
+    </File>
+    <File Include="ApprovalSetup.aspx">
+      <publishTime>08/06/2015 13:16:00</publishTime>
+    </File>
+    <File Include="AuditLog.aspx">
+      <publishTime>08/06/2015 13:16:00</publishTime>
+    </File>
+    <File Include="bin/Ionic.Zip.dll">
+      <publishTime>07/23/2015 17:08:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Exchange.WebServices.dll">
+      <publishTime>06/23/2015 09:09:08</publishTime>
+    </File>
+    <File Include="bin/PSMS.dll">
+      <publishTime>08/17/2015 14:46:57</publishTime>
+    </File>
+    <File Include="bin/PSMS.dll.config">
+      <publishTime>08/17/2015 09:50:46</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.Design.dll">
+      <publishTime>06/24/2015 10:58:36</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.dll">
+      <publishTime>06/16/2015 11:10:18</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.Skins.dll">
+      <publishTime>06/24/2015 10:58:36</publishTime>
+    </File>
+    <File Include="css/AppStyle.css">
+      <publishTime>08/13/2015 10:15:52</publishTime>
+    </File>
+    <File Include="css/menu.css">
+      <publishTime>06/28/2015 15:03:47</publishTime>
+    </File>
+    <File Include="css/Style.css">
+      <publishTime>06/16/2015 12:34:59</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>07/02/2015 13:17:37</publishTime>
+    </File>
+    <File Include="Donor.aspx">
+      <publishTime>08/06/2015 13:16:00</publishTime>
+    </File>
+    <File Include="dsPSMS.xsc">
+      <publishTime>07/29/2015 12:31:24</publishTime>
+    </File>
+    <File Include="dsPSMS.xss">
+      <publishTime>08/10/2015 18:47:04</publishTime>
+    </File>
+    <File Include="Framework.aspx">
+      <publishTime>08/06/2015 13:16:00</publishTime>
+    </File>
+    <File Include="FWT.aspx">
+      <publishTime>08/17/2015 14:34:59</publishTime>
+    </File>
+    <File Include="GRNSCN.aspx">
+      <publishTime>08/10/2015 15:31:37</publishTime>
+    </File>
+    <File Include="Group.aspx">
+      <publishTime>08/06/2015 13:16:01</publishTime>
+    </File>
+    <File Include="images/AjaxLoader.gif">
+      <publishTime>08/17/2015 10:54:04</publishTime>
+    </File>
+    <File Include="images/bgnoise_lg.png">
+      <publishTime>06/28/2015 15:03:47</publishTime>
+    </File>
+    <File Include="images/bg_grad.png">
+      <publishTime>07/09/2015 13:40:10</publishTime>
+    </File>
+    <File Include="images/Front.jpg">
+      <publishTime>07/01/2015 11:23:46</publishTime>
+    </File>
+    <File Include="images/Information.png">
+      <publishTime>07/09/2015 13:40:10</publishTime>
+    </File>
+    <File Include="images/nav_arrow.png">
+      <publishTime>06/30/2015 14:25:22</publishTime>
+    </File>
+    <File Include="images/SCI.png">
+      <publishTime>06/28/2015 15:03:47</publishTime>
+    </File>
+    <File Include="images/SCI_RptLogo.jpg">
+      <publishTime>08/10/2015 18:47:04</publishTime>
+    </File>
+    <File Include="images/search.png">
+      <publishTime>07/29/2015 15:25:14</publishTime>
+    </File>
+    <File Include="images/searchhover.png">
+      <publishTime>08/02/2015 12:01:21</publishTime>
+    </File>
+    <File Include="images/warning.png">
+      <publishTime>07/09/2015 13:40:10</publishTime>
+    </File>
+    <File Include="Invitation.aspx">
+      <publishTime>08/06/2015 13:16:01</publishTime>
+    </File>
+    <File Include="Item.aspx">
+      <publishTime>08/06/2015 13:16:01</publishTime>
+    </File>
+    <File Include="ItemCategory.aspx">
+      <publishTime>08/11/2015 13:23:35</publishTime>
+    </File>
+    <File Include="ItemSubCategory.aspx">
+      <publishTime>08/06/2015 13:16:01</publishTime>
+    </File>
+    <File Include="ItemUnit.aspx">
+      <publishTime>08/06/2015 13:16:01</publishTime>
+    </File>
+    <File Include="Location.aspx">
+      <publishTime>08/06/2015 13:16:01</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>08/05/2015 15:18:37</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/23/2015 17:08:43</publishTime>
+    </File>
+    <File Include="Payment.aspx">
+      <publishTime>08/10/2015 13:40:19</publishTime>
+    </File>
+    <File Include="PCMember.aspx">
+      <publishTime>08/10/2015 18:47:04</publishTime>
+    </File>
+    <File Include="Permission.aspx">
+      <publishTime>08/17/2015 14:34:59</publishTime>
+    </File>
+    <File Include="PRAssign.aspx">
+      <publishTime>08/12/2015 14:27:49</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>08/17/2015 14:47:00</publishTime>
+    </File>
+    <File Include="Process.aspx">
+      <publishTime>08/10/2015 18:47:04</publishTime>
+    </File>
+    <File Include="PurchaseOrder.aspx">
+      <publishTime>08/11/2015 10:54:58</publishTime>
+    </File>
+    <File Include="Reports/GRN.aspx">
+      <publishTime>07/13/2015 11:34:34</publishTime>
+    </File>
+    <File Include="Reports/Invitation.aspx">
+      <publishTime>07/13/2015 11:34:34</publishTime>
+    </File>
+    <File Include="Reports/ItemInfo.aspx">
+      <publishTime>07/13/2015 11:34:34</publishTime>
+    </File>
+    <File Include="Reports/PO.aspx">
+      <publishTime>07/13/2015 11:34:34</publishTime>
+    </File>
+    <File Include="Reports/PR.aspx">
+      <publishTime>08/12/2015 13:19:02</publishTime>
+    </File>
+    <File Include="Reports/VendorByCategory.aspx">
+      <publishTime>07/13/2015 11:34:34</publishTime>
+    </File>
+    <File Include="Reports/VendorByType.aspx">
+      <publishTime>07/13/2015 11:34:34</publishTime>
+    </File>
+    <File Include="Scripts/AppScript.js">
+      <publishTime>08/17/2015 14:35:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.2.min.js">
+      <publishTime>06/28/2015 15:03:47</publishTime>
+    </File>
+    <File Include="Status.aspx">
+      <publishTime>08/10/2015 18:47:04</publishTime>
+    </File>
+    <File Include="TaskManager.aspx">
+      <publishTime>08/13/2015 12:26:06</publishTime>
+    </File>
+    <File Include="Test.aspx">
+      <publishTime>08/17/2015 09:24:46</publishTime>
+    </File>
+    <File Include="User.aspx">
+      <publishTime>08/06/2015 13:16:01</publishTime>
+    </File>
+    <File Include="Vendor.aspx">
+      <publishTime>08/06/2015 13:16:01</publishTime>
+    </File>
+    <File Include="VendorSelection.aspx">
+      <publishTime>08/06/2015 13:16:01</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/17/2015 14:46:58</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

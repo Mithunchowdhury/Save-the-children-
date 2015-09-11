@@ -1,0 +1,357 @@
+﻿/* Generic HTML */
+* {
+    font-family: Segoe UI;
+    margin: 0;
+}
+
+html {
+    margin: 0;
+}
+
+body{
+    background: rgba(0, 0, 0, 0) url("../images/bgnoise_lg.png") repeat scroll 0 0;
+}
+/* Generic HTML - END */
+
+.appView {
+    height: auto;
+    width: 1024px;     
+    margin: 0 auto 0 auto;
+}
+
+/* Page Header Block*/
+.appView div.header {
+    background: rgba(0, 0, 0, 0.05) none repeat scroll 0 0;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    line-height: 15px;
+    padding-left: 10px;
+    position: relative;
+    text-transform: capitalize;
+    z-index: 9999;
+   
+}
+
+.appView div.header table.topTable {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-spacing: 0;
+}
+
+.appView div.header table.topTable tr td#logo {
+    vertical-align:middle;
+    padding-top: 2px;
+    height:15px;
+    width:15px;
+}
+
+.appView div.header table.topTable tr td#name {
+    width: 200px;
+    text-align:left;
+}
+
+.appView div.header table.topTable tr td#title {
+    text-align: center;
+    font-size: 14px;
+}
+
+.appView div.header table.topTable tr td#user {
+    width: 200px;
+    text-align: right;
+}
+
+/* Page Header Block - End*/ 
+
+/* Control Button*/
+.buttonStyle {
+    background-color:#c7081b;
+    border-radius: 3px;
+    height:25px;
+    color:#fefefe;
+    font-size:12px;
+    min-width:10px;
+
+    width: auto;
+    text-align: center;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.buttonStyle:hover {
+    background-color:#a90313;
+    cursor:pointer;
+    border-radius: 3px;
+}
+
+.baseForm {
+    /*margin: 0 auto;*/
+    /*width: 230px;*/
+    padding: 20px;
+    padding-top:0px;   
+    background: #f4f4f4;
+    border-radius: 3px;
+    margin: 0 auto 0 auto; 
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    min-height:400px;
+    height:auto;
+}
+
+div.baseFormTitle{
+    font-size: 20px; 
+    color: #ca0000; 
+    word-spacing: 1px;
+    /*height: 15px;*/
+}
+
+div.baseFormBody {
+    background-color: #ECEBE8; 
+    padding: 10px; 
+    margin: 0 auto 0 auto; 
+    border: solid 1px #d7d5d5; 
+    height: 90%; 
+    border-radius: 4px;
+}
+
+div.baseFormBodyFlex {
+    background-color: #ECEBE8; 
+    padding: 10px; 
+    /*margin: 0 auto 0 auto;*/ 
+    border: solid 1px #d7d5d5; 
+    border-radius: 4px;
+}
+
+div.baseFormBody td{
+    padding: 2px;
+    vertical-align:middle;
+    /*background-color: #ECEBE8;*/
+}
+
+div.baseFormBodyFlex td{
+    padding: 2px;
+    vertical-align:middle;
+    /*background-color: #ECEBE8;*/
+}
+
+div.baseFormBody td.lebel{
+    padding-left: 5px;
+}
+
+div.baseFormBodyFlex td.lebel{
+    padding-left: 5px;
+}
+
+/* Table Formater*/
+div.cellPad td {
+    /* padding-left: 2px;*/
+    padding: 4px;
+    background-color: #ECEBE8;
+}
+
+div.cellPadThin td {
+    /* padding-left: 2px;*/
+    padding: 1px;
+    background-color: #ECEBE8;
+}
+
+/*Error MassageBox*/
+.errorBox {
+    color: black;
+    /*background-color: red;*/
+    font-size: 14px;
+    padding: 5px;
+    /*border-top: 5px solid #c00;*/
+    line-height: 15px;
+    position: fixed;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image:url('../images/bg_grad.png'); 
+    background-repeat: repeat-x;
+}
+
+.errorBoxRight {
+    float:right;
+    margin-right:10px;
+    text-align:center;
+    font: bold 30px arial;
+    margin-top:2px;
+    cursor:pointer;
+    border: 1px solid black;
+    width:30px;
+}
+/*Error MassageBox - End*/
+
+
+/* added by Hasan - for group title in base form body section*/
+.baseFormBodyTitle{
+    padding: 3px;
+    font-weight:bold;
+}
+
+.searchButton{
+    vertical-align:middle;
+    background:transparent url("../images/search.png");
+}
+
+.searchButton:hover{
+    background:white url("../images/searchhover.png");
+}
+
+
+
+/**/
+.settingsFormBodyLeft{
+    background-color: #ECEBE8; 
+    padding: 10px; 
+    margin: 0 auto 0 auto; 
+    border: solid 1px #d7d5d5;  
+    border-radius: 4px;
+
+    width: 45%; 
+    float: left; 
+    height:90%;
+}
+
+.settingsFormBodyRight{
+    background-color: #ECEBE8; 
+    padding: 10px; 
+    margin: 0 auto 0 auto; 
+    border: solid 1px #d7d5d5;  
+    border-radius: 4px;
+
+    width: 45%; 
+    float: right; 
+    height:90%;
+}
+
+.settingsForm {    
+    padding: 20px;
+    padding-top:0px;   
+    background: #f4f4f4;
+    border-radius: 3px;
+    margin: 0 auto 0 auto; 
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    overflow:hidden;   
+    height:500px;
+    width:600px;    
+}
+
+
+.settingsEntryTable {
+    width: 100%;
+    text-align: left;
+    border:0;
+}
+
+.RadGrid_Metro .rgFilterRow td
+{
+    border: 1px solid #e5e5e5;
+}
+
+table tbody tr td div span {
+    width: auto !important;
+}
+
+table tbody tr td span {
+    width: 100% !important;
+}
+
+.RadGrid_CustomHeader th.rgHeader {
+    line-height: 14px;
+}
+
+.rgAltRow, .rgRow td {
+    line-height: 18px;
+    cursor: pointer !important;
+    font-size: 12px;
+}
+
+.rgFilterRow td{
+    border-color:white !important;
+}
+
+.rgFooter td{
+    border-color:white !important;
+}
+
+/* For upload control - start*/
+.ruUploadProgress, li .ruCancel, li .ruRemove {
+    visibility:hidden;
+}
+
+li.ruUploading {
+    display: none;
+}
+.RadUpload .ruUploadSuccess {
+    visibility:visible;
+}
+.RadUpload_Default .ruRemove {
+    visibility:visible;
+}
+/* For upload control - end*/
+
+/*Task Manager*/
+.inline-rb {
+    text-align: right;
+}
+
+.inline-rb input[type="radio"] {
+    width: 30px;
+    cursor: pointer;
+    background-color: red;
+    color: #e01212;
+    vertical-align: middle;
+}
+
+.inline-rb label {
+    display: inline-block; 
+    background-color: none;
+    color: #e01212;
+    vertical-align: middle;
+    cursor: pointer;
+}
+/*Task Managr - End*/
+
+.radListBoxLeftAligned {
+    text-align: left;
+}
+
+.auto-style1 
+{
+    height: 27px;
+}
+.riRead
+{
+    cursor:pointer;
+}
+.RadComboBoxDropDown .rcbList
+{
+    height: 250px;
+}
+.racTokenList span 
+{
+    width: auto !important;
+}
+
+div.RadComboBox table.rcbDisabled tr.rcbReadOnly input.rcbInput {
+    color: gray;
+}
+
+
+
+div.settingsForm div.settingsFormBodyLeft div.RadGrid{
+    height: 98%;
+    overflow-x: scroll;
+    width:auto !important;
+}
+
+div.settingsForm div.settingsFormBodyLeft div.RadGrid div.rgDataDiv
+{
+    height:auto !important;
+}

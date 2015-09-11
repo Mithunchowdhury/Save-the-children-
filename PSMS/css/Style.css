@@ -1,0 +1,20 @@
+﻿.rdfLabel {
+    box-sizing: border-box;
+    float: left;
+    line-height: 1;
+    padding-right: 1.2em;
+    vertical-align: top;
+    width: 30%;
+}
+
+.demo-container .RadUpload .ruUploadProgress {
+    width: 210px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ 
+ 
+.demo-container .ruFakeInput {
+    width: 220px;
+}

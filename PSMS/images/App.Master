@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="App.master.cs" Inherits="PSMS.App" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700" rel="stylesheet" type="text/css" />
+    <link href="css/AppStyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <script src="Scripts/jquery-1.7.2.min.js"></script>
+    <script src="Scripts/AppScript.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div id="divPageBase" class="appView" style="width:1024px;">
+            <div class="header">
+                <table class="topTable">
+                    <tr>
+                        <td id="logo"><a href="https://bangladesh.savethechildren.net/">
+                            <img src="images/SCI.png" alt="savethechildren" width="15" height="15" /></a></td>
+                        <td id="name" style="padding-left: 5px;"><strong>Save the Children</strong></td>
+                        <td id="title"><strong>SUPPLY CHAIN MANAGEMENT SYSTEM</strong></td>
+                        <td id="user">
+                            <asp:Label runat="server" ID="lblUser" Font-Bold="true"></asp:Label>
+                            | 
+                            <asp:LinkButton runat="server" ID="lbLogout" Text="Logout" ForeColor="Black" Font-Underline="false" PostBackUrl="~/Login.aspx"></asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="scimenu">
+                <ul>
+
+                    <li>
+                        <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Default.aspx" Text="Home" /></li>
+                    <%--<a href="~/Default.aspx">Home</a>--%>
+
+                    <li><a href="#">Information<span></span></a>
+                        <ul class="sub_menu">
+                            <li>
+                                <asp:LinkButton ID="lbCategory" runat="server" PostBackUrl="~/ItemCategory.aspx">Item Category</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbSubCategory" runat="server" PostBackUrl="~/ItemSubCategory.aspx">Item Sub-Category</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbUnit" runat="server" PostBackUrl="~/ItemUnit.aspx">Item Unit</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbItem" runat="server" PostBackUrl="~/Item.aspx">Item Information</asp:LinkButton></li>
+
+                            <li style="border-top: solid 1px #e9e1e1;">
+                                <asp:LinkButton ID="lbVendor" runat="server" PostBackUrl="~/Vendor.aspx">Vendor</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbDonor" runat="server" PostBackUrl="~/Donor.aspx">Donor</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbPCMember" runat="server" PostBackUrl="~/PCMember.aspx">PC Member</asp:LinkButton></li>
+                            <li style="border-top: solid 1px #e9e1e1;">
+                                <asp:LinkButton ID="lbApprovalSetupTechnical" runat="server" PostBackUrl="~/ApprovalSetup.aspx?type=Technical">Technical Approval</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbApprovalSetupGrants" runat="server" PostBackUrl="~/ApprovalSetup.aspx?type=Grants">Grants Approval</asp:LinkButton></li>
+                            <li style="border-top: solid 1px #e9e1e1;">
+                                <asp:LinkButton ID="lbProcess" runat="server" PostBackUrl="~/Process.aspx">Procurement Process</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbStatusEntry" runat="server" PostBackUrl="~/Status.aspx">Procurement Status</asp:LinkButton></li>
+                            <li style="border-top: solid 1px #e9e1e1;">
+                                <asp:LinkButton ID="lbLocation" runat="server" PostBackUrl="~/Location.aspx">Location</asp:LinkButton></li>
+                            <li style="border-top: solid 1px #e9e1e1;">
+                                <asp:LinkButton ID="lbFramework" runat="server" PostBackUrl="~/Framework.aspx">Framework</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li><a href="TaskManager.aspx">Operation<span></span></a>
+                        <ul class="sub_menu">
+                            <li>
+                                <asp:LinkButton ID="lbTaskManager" runat="server" PostBackUrl="~/TaskManager.aspx">Task Manager</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbAssignPR" runat="server" PostBackUrl="~/PRAssign.aspx">Assign PR</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbInvitation" runat="server" PostBackUrl="~/Invitation.aspx">Invitation</asp:LinkButton></li>
+                            <%--<li>
+                                <asp:LinkButton ID="lbInvitationList" runat="server" PostBackUrl="~/InvitationList.aspx">Invitation List</asp:LinkButton></li>--%>
+                            <li>
+                                <asp:LinkButton ID="lbSelection" runat="server" PostBackUrl="~/VendorSelection.aspx">Selection</asp:LinkButton></li>
+                            <%--<li>
+                                <asp:LinkButton ID="lbSelectionList" runat="server" PostBackUrl="~/VendorSelectionList.aspx">Selection List</asp:LinkButton></li>--%>
+                            <li>
+                                <asp:LinkButton ID="lbPO" runat="server" PostBackUrl="~/PurchaseOrder.aspx">Purchase Order (PO)</asp:LinkButton></li>
+                            <%--<li>
+                                <asp:LinkButton ID="lbPOList" runat="server" PostBackUrl="~/PurchaseOrderList.aspx">Purchase Order (PO) List</asp:LinkButton></li>--%>
+                            <li>
+                                <asp:LinkButton ID="lbGRNSCN" runat="server" PostBackUrl="~/GRNSCN.aspx">Goods Receiving Note (GRN)/ Service Completion Note (SCN)</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbPayment" runat="server" PostBackUrl="~/Payment.aspx">Payment Bill</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Reports <span></span></a>
+                        <ul style="display: none;" class="sub_menu">
+                            <li>
+                                <asp:LinkButton ID="lbInvitationReport" runat="server">Invitation Report</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbPOReport" runat="server">PO Report</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbPRTrackerReport" runat="server">PR Tracker to Excel</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbItemInfoReport" runat="server" PostBackUrl="~/Reports/ItemInfo.aspx">Item Info Report group by Category & Subcategory</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbVendorInfoReport" runat="server" PostBackUrl="~/Reports/VendorByCategory.aspx">Vendor Info Report group by Category</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Reports/VendorByType.aspx">Vendor Info Report group by Vendor Type</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbProgramWisePRvsPOReport" runat="server">Sector Program Wise PR vs PO Report</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbDonorWisePRvsPOReport" runat="server">Donor Wise PR vs PO Report</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbFrameworkContractSummaryReport" runat="server">Framework/Contract Summary</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbInvitationSummaryReport" runat="server">Invitation Summary</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbQuarterlyPRvsPOCountReport" runat="server">Quarterly PR vs PO Count</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbMonthlyPRvsPOCountReport" runat="server">Monthly PR vs PO Count</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbDateWiseProcessTypePRCountReport" runat="server">Date Wise PR count by Process Type</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbDateWiseCategoryPRCountReport" runat="server">Date Wise PR count by Category</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Tools<span></span></a>
+                        <ul style="display: none;" class="sub_menu">
+                            <li>
+                                <asp:LinkButton ID="lbUser" runat="server" PostBackUrl="~/User.aspx">User</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbGroup" runat="server" PostBackUrl="~/Group.aspx">Group</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbPermission" runat="server" PostBackUrl="~/Permission.aspx">Permission</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lbAuditLog" runat="server" PostBackUrl="~/AuditLog.aspx">Audit Log</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a></li>
+                </ul>
+
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <div style="border-top: solid 2px #d7d5d5; margin-top: 30px; font-size: 10px; color: #808080; text-align: center; padding-bottom: 15px;">COPYRIGHT SCI, DEVELOPED BY ICT MIS Team</div>
+            <asp:UpdateProgress ID="uprogMain" runat="server" DisplayAfter="0">
+                    <ProgressTemplate>
+                        <div id="divLodingBase"
+                            style="position: fixed; padding: 2px; background-color: White; font-size: 30px; z-index: 9000000; opacity: .7; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);">
+                        </div>
+                        <div id="divLodingSpin" 
+                            style="display:none; position: fixed; background-color: #f3e9d3; font-size: 25px; z-index: 9000001; font-family: 'Open Sans',Segoe UI,arial,sans-serif; font-weight: lighter;">
+                            <div style="height: 65px; padding-top:10px;">
+                                <div style="padding-left: 20px; float: left;">
+                                    <asp:Image ID="imgLoding" runat="server" ImageUrl="~/images/AjaxLoader.gif" />
+                                </div>
+                                <div style="float: right; padding-top:25px; padding-right:20px;">Loading, wait ...&nbsp;&nbsp;<label id="minutes">00</label>:<label id="seconds">00</label></div>
+                            </div>
+                            <div style="height: 5px; background-color: Gray;">
+                            </div>
+                        </div>
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+        </div>
+    </form>
+</body>
+</html>
